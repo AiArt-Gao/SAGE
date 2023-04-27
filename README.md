@@ -1,4 +1,4 @@
-# IJCAI2023 "Semantic-aware Generation of Multi-view Portrait Drawings" (SAGE)
+# SAGE: Semantic-aware Generation of Multi-view Portrait Drawings, IJCAI 2023 
 
 comming soon...
 
