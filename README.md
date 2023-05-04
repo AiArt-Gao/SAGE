@@ -30,7 +30,7 @@ cd SAGE
 conda create -n sage python=3.6.7
 conda activate sage
 
-pip3 install torch==1.8.2 torchvision==0.9.2 torchaudio==0.8.2 --extra-index-url https://download.pytorch.org/whl/lts/1.8/cu111
+pip install torch==1.8.2 torchvision==0.9.2 torchaudio==0.8.2 --extra-index-url https://download.pytorch.org/whl/lts/1.8/cu111
 
 pip install -e pytorch_ema_lib
 ```
@@ -66,3 +66,6 @@ python render_multiview_image.py --path [ckpt_path]/generator.pth --output_dir i
 
 ### Some questions
 If you want to train with wikiart dataset, please make sure you are familiar to our model, and delete semantic map branch, only use portrait Decoder. And when you use our wikiart ckpt to render images, please change the script to make the code work. Our model is trained on a single RTX3090, if you have some devices, please set ```export CUDA_VISIBLE_DEVICES=device-num``` before running our train or finetune script. Feel free to give me feedback and send me an email if you have any problems with the code.
+
+### Acknowledgment
+Our code is inspired by [MVCGAN](https://github.com/Xuanmeng-Zhang/MVCGAN) and [CIPS-3D](https://github.com/PeterouZh/CIPS-3D). Thanks to [Mr. Gao](https://github.com/fei-aiart) for his guidance on the thesis and to all fellow students for their help.
