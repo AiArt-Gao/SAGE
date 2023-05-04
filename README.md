@@ -37,7 +37,7 @@ pip install -e pytorch_ema_lib
 
 ### Dataset and checkpoint
 #### Pre-training stage
-In the pre-training stage, we use CelebA-HQ dataset to train our model, click this link https://github.com/switchablenorms/CelebAMask-HQ and make sure you have initial portraits and corresponded semantic maps.
+In the pre-training stage, we use CelebA-HQ dataset to train our model, click this link [CelebAMask-HQ](https://github.com/switchablenorms/CelebAMask-HQ) and make sure you have initial portraits and corresponded semantic maps.
 #### Finetune stage
 We release sketch style dataset and Pen drawing dataset for training. We are unable to make the line art dataset public for some reasons. The download link is in next section.
 #### checkpoint
