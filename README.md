@@ -35,11 +35,14 @@ pip3 install torch==1.8.2 torchvision==0.9.2 torchaudio==0.8.2 --extra-index-url
 pip install -e pytorch_ema_lib
 ```
 
-### Dataset
+### Dataset and checkpoint
 #### Pre-training stage
 In the pre-training stage, we use CelebA-HQ dataset to train our model, click this link https://github.com/switchablenorms/CelebAMask-HQ and make sure you have initial portraits and corresponded semantic maps.
 #### Finetune stage
-waiting...
+We release sketch style dataset and Pen drawing dataset for training. We are unable to make the line art dataset public for some reasons. The download link is in next section.
+#### checkpoint
+We expose the checkpoint file for the pre-training phase as well as finetune phase. please click link [dataset and checkpoint](https://drive.google.com/drive/folders/1giltfkPI3oC5yWu_5jsLOwlpcJZjpgW0?usp=share_link) to download.
+
 
 ### Train
 ```
@@ -49,7 +52,7 @@ eg: python train.py --curriculum CelebA --output_dir pre-train
 ```
 
 ### Finetune
-In this section, you need to check file ```curriculum_finetune.py``` to make sure your data path is right. We are considering to release our APDs, please wait for days. And you need to see line 208 of script ```./generators/refinegan.py``` to unpack the comment, using u-net in finetune stage.
+In this section, you need to check file ```curriculum_finetune.py``` to make sure your data path is right. And you need to see line 208 of script ```./generators/refinegan.py``` to unpack the comment, using u-net in finetune stage.
 ```
 python finetune.py --curriculum CelebA --output_dir [your path] --load_dir [your pretrained ckpt path] --set_step 50000
 
@@ -60,3 +63,6 @@ eg: python finetune.py --curriculum ClebeA --output_dir style1 --load_dir pre-tr
 ```
 python render_multiview_image.py --path [ckpt_path]/generator.pth --output_dir images
 ```
+
+### Some questions
+If you want to train with wikiart dataset, please make sure you are familiar to our model, and delete semantic map branch, only use portrait Decoder. And when you use our wikiart ckpt to render images, please change the script to make the code work. Feel free to give me feedback and send me an email if you have any problems with the code.
