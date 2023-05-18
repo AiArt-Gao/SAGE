@@ -133,6 +133,7 @@ def train(rank, world_size, opt):
     total_progress_bar = tqdm(total=opt.n_epochs, desc="Total progress", dynamic_ncols=True)
     total_progress_bar.update(discriminator_rgb.epoch)
     interior_step_bar = tqdm(dynamic_ncols=True)
+    step_last_upsample = None
     for epoch in range(opt.n_epochs):
         total_progress_bar.update(1)
         torch.cuda.empty_cache()
@@ -154,7 +155,6 @@ def train(rank, world_size, opt):
             param_group['betas'] = metadata['betas']
             param_group['weight_decay'] = metadata['weight_decay']
 
-        step_last_upsample = None
 
         if not dataloader or dataloader.batch_size != metadata['batch_size']:
             dataset = datasets.get_dataset(metadata['dataset'], **metadata)
