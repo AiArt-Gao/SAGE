@@ -5,7 +5,22 @@ Neural radiance fields (NeRF) based methods have shown amazing performance in sy
 
 ## Paper Information
 
-Biao Ma, Fei Gao, Chang Jiang, Nannan Wang, Gang Xu, "[Semantic-aware Generation of Multi-view Portrait Drawings](https://arxiv.org/abs/2305.02618)," the 32nd International Joint Conference on Artificial Intelligence (IJCAI), accepted, 2023.
+Biao Ma, Fei Gao* , Chang Jiang, Nannan Wang, Gang Xu, “Semantic-aware Generation of Multi-view Portrait Drawings,” the 32nd International Joint Conference on Artificial Intelligence (IJCAI), 1258-1266, 2023.
+
+```[bib]
+@inproceedings{ijcai2023sage,
+  title     = {Semantic-Aware Generation of Multi-View Portrait Drawings},
+  author    = {Ma, Biao and Gao, Fei and Jiang, Chang and Wang, Nannan and Xu, Gang},
+  booktitle = {Proceedings of the Thirty-Second International Joint Conference on
+               Artificial Intelligence, {IJCAI-23}},
+  publisher = {International Joint Conferences on Artificial Intelligence Organization},
+  editor    = {Edith Elkind},
+  pages     = {1258--1266},
+  year      = {2023},
+  month     = {8},
+  url       = {https://doi.org/10.24963/ijcai.2023/140},
+}
+```
 
 ## Pipeline
 
